@@ -1,90 +1,225 @@
-@charset "UTF-8";
-
-* {
-    padding: 0;
+*{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    font-size: 10px;
-}
-
-body {
-    background: #0D0126;
-}
-
-#container {
-    max-width: 1024px;
-    margin: 0 auto;
-}
-
-#container > header {
-    background: #0D0126;
-    text-align: center;
-    padding-top: 1rem;
-}
-
-main {
-    background: #ecedea;
-    font-size: 20px;
-    padding: 1rem;
-}
-
-footer {
-    background: #654E86;
-    height: 7rem;
-    font-size: 20px;
-    padding: 1rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
-    font-weight: 800;
-    color: #ecedea;
-}
-
-/* NAV */
-nav {
-    background: #0F0140;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    color: #ecedea;
-    border-right: 1px solid #d4e4ef;
-    display: inline-block;
-}
-
-nav ul li a {
+    font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-    display: block;
-    color: #ecedea;
-    padding: 15px;
+    list-style: none;
+    
 }
 
-/* MAIN */
-main > header {
-    color: #F25C05;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
-    font-weight: 800;
-}   
-
-.produto { margin-bottom: 20px; cursor: pointer; }
-.produto p {
-    background-color: #F25C05;
-    color: whitesmoke;
-    padding: 5px 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.produto p:hover {
-    transform: rotate(-2deg);    
+.background{ /*refere-se a tudo dentro da classe backgroud*/
+    background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
 }
 
-#produtos {
+header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    background: transparent;
+    transition: all .35s ease;
+    background-color: #fff;
+    padding: 14px 14%;
+}
+
+.logo{
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.cabecalho-link{
+    display: flex;
+    gap: 3rem;
+}
+
+.cabecalho-link a{
+    color: #111;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.cabecalho-link a:hover{
+    color: #c8815f;
+}
+
+.Meio{
+    padding: 7rem 0 0 8.5rem;
+    line-height: 4rem;
+}
+
+.Meio h1{
+    font-size: 4rem;
+    
+}
+
+.Meio button{
+    background-color: #c8815f;
+    padding: 1rem 3rem 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: 0.3s;
+
+}
+
+.Meio button:hover{
+      background-color: #111;
+      transform: scaleY(1.2);
+}
+
+section{
+    padding-top: 7rem;
+}
+
+section h1{
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.Container-card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 2rem;
+   
+}
+
+.cards img{
+    width: 450px;
+    height: auto;
+    transition: 0.35s ease;
+    
+}
+
+.cards img:hover{
+     transform: scale(0.9) translateY(-5px);
+     cursor: pointer;
+}
+
+.Container-roupas{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+    
+}
+
+.Container-roupas img:hover{
+    transform: scale(0.9) translateY(-5px);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.roupa img{
+    width: 250px;
+    height: auto;
+}
+
+.roupa{
+    background-color: #c8815f;
+    color: #000;
+}
+
+.formulario{
+    width: 100%;
+    height: 40vh;
+    background:#c8815f ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.formulario .esquerda{
+    width: 40%;
+    margin-left: 60px;
+}
+.formulario .esquerda h1{
+    font-size: 2.2rem;
+    font-weight: 200;
+    padding: 0 20px;
+
+}
+.formulario .esquerda p{
+    font-size: 1.2rem;
+    margin-top: 25px;
+    padding: 0 20px;
+}
+.formulario .direita{
+    width: 40%;
+    margin-right: 60px;
+}
+.formulario .direita input{
+    padding: 10px 60px;
+    border: none;
+    font-size: 1.1rem;
+    outline: none;
+    margin-top: 5px;
+}
+.formulario .direita button{
+    padding: 10px 35px;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    border: none;
+    background: #302725;
+    color: #fff;
+    cursor: pointer;
+}
+
+#Contato{
+    display: flex;
+    gap: 5rem;
     justify-content: space-around;
+    background-color: #111;
+    padding: 8rem;
+    margin-top: 5rem;
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+}
+
+.meio-contato h3{
+    color: #fff;
+    font-size: 23px;
+    margin-bottom: 1.6rem;
+}
+
+.meio-contato h5{
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+}
+
+.meio-contato li{
+    margin-bottom: 15px;
+}
+
+.meio-contato li a{
+    display: block;
+    color: #555;
+    font-weight: 600;
+    transition: all .35s ease;
+}
+
+.meio-contato .icons a{
+    margin-right: 15px;
 }
