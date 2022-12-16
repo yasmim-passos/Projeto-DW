@@ -114,7 +114,7 @@ section h1{
      cursor: pointer;
 }
 
-.Container-roupas{
+.Container-joia{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -125,19 +125,19 @@ section h1{
     
 }
 
-.Container-roupas img:hover{
+.Container-joia img:hover{
     transform: scale(0.9) translateY(-5px);
     cursor: pointer;
     transition: 0.3s;
 
 }
 
-.roupa img{
+.joia img{
     width: 250px;
     height: auto;
 }
 
-.roupa{
+.joia{
     background-color: #c8815f;
     color: #000;
 }
